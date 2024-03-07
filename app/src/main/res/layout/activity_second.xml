@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/degradado"
+    android:orientation="vertical"
+
+    tools:context=".Activity_Second">
+
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="CerrarSesion"
+        android:text="Cerrar Sesion"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+
+        android:textColorLink="#000000"
+        app:icon="@drawable/cerrar"
+        app:iconTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#000000"
+        app:strokeColor="#000000" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="94dp"
+        android:fontFamily="@font/titulos"
+        android:text="Panes"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:background="#F8E3FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPedido"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="361dp"
+        android:backgroundTint="#F8E3FF"
+        android:onClick="Irpedido"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pedido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12" />
+
+
+    <ImageButton
+        android:id="@+id/btnPan"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#F8E3FF"
+        android:onClick="IrPan"
+        android:scaleType="fitCenter"
+        android:src="@drawable/panicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPedido"
+        app:layout_constraintStart_toEndOf="@+id/btnHome" />
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#F8E3FF"
+        android:onClick="irHome"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPan"
+        app:layout_constraintStart_toEndOf="@+id/btnPasteles" />
+
+    <ImageButton
+        android:id="@+id/btnPasteles"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:adjustViewBounds="false"
+        android:backgroundTint="#F8E3FF"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="Pasteles"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pasteles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnHome"
+        app:layout_constraintStart_toEndOf="@+id/btnDulces" />
+
+    <ImageButton
+        android:id="@+id/btnDulces"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#F8E3FF"
+        android:cropToPadding="true"
+        android:isScrollContainer="false"
+        android:pointerIcon="zoom_in"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dulces"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPasteles"
+        app:layout_constraintStart_toStartOf="@+id/textView12" />
+
+    <ImageButton
+        android:id="@+id/ibtp1_1"
+        android:layout_width="104dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#F8E3FF"
+        android:cropToPadding="true"
+        android:isScrollContainer="false"
+        android:pointerIcon="zoom_in"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chees"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ibtd1_1" />
+
+    <ImageButton
+        android:id="@+id/ibtp1_2"
+        android:layout_width="104dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#F8E3FF"
+        android:cropToPadding="true"
+        android:isScrollContainer="false"
+        android:pointerIcon="zoom_in"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kuchen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ibtp1_1"
+        app:layout_constraintStart_toStartOf="@+id/ibtp1_1" />
+
+    <ImageButton
+        android:id="@+id/ibtp1_3"
+        android:layout_width="104dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#F8E3FF"
+        android:cropToPadding="true"
+        android:isScrollContainer="false"
+        android:pointerIcon="zoom_in"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cupcake"
+        app:layout_constraintBottom_toTopOf="@+id/ibtp1_2"
+        app:layout_constraintEnd_toEndOf="@+id/ibtp1_2"
+        app:layout_constraintStart_toStartOf="@+id/ibtp1_2" />
+
+    <ImageButton
+        android:id="@+id/ibtd1_2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#F8E3FF"
+        android:cropToPadding="true"
+        android:isScrollContainer="false"
+        android:pointerIcon="zoom_in"
+        android:scaleType="centerCrop"
+        android:src="@drawable/galletas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibtp1_1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ibtd1_1" />
+
+    <ImageButton
+        android:id="@+id/ibtd1_1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#F8E3FF"
+        android:cropToPadding="true"
+        android:isScrollContainer="false"
+        android:onClick="Alfajores"
+        android:pointerIcon="zoom_in"
+        android:scaleType="centerCrop"
+        android:src="@drawable/alfajores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPasteles"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:foregroundGravity="center"
+        android:onClick="Vercarrito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/carrito"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/badge"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="144dp"
+        android:background="@drawable/badge_background"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
